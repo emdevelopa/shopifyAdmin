@@ -66,8 +66,14 @@ nav {
   background-color: #ffffff;
   padding: 0em 1em;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.setup-guide-section {
+  display: flex;
+  justify-content: space-between;
 }
 .dropdown-icons {
   padding: 2em;
@@ -78,4 +84,31 @@ nav {
   margin-top: 8px;
   position: absolute;
   top: 5%;
+}
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.progress-bar {
+  width: 50%;
+  height: 6px;
+  background: #e3e3e3;
+  border-radius: 5px;
+}
+.completed {
+  background: #000;
+  border-radius: 5px;
+  width: 20%;
+  height: 6px;
+}
+
+@media (min-width:400px) {
+    body{
+        background-color: red;
+    }
+    nav{
+        justify-content: space-between;
+    }
 }
