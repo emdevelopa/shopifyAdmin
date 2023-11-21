@@ -90,6 +90,7 @@ nav {
 .dropdown-icons {
   padding: 2em;
   position: relative;
+  
 }
 
 .setup-guide-container .dropdown-icons svg {
@@ -100,7 +101,6 @@ nav {
 .progress-bar-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1em;
 }
 .progress-bar {
@@ -177,5 +177,12 @@ nav {
   }
   .text-content-container div button{
   padding: 10px 18px;
+  }
+  .setup-guide-container{
+    border: 1px solid rgba(128, 128, 128, 0.392);
+    border-radius: 20px;
+  }
+  .dropdown-icons svg{
+    /* background: #000; */
   }
 }
