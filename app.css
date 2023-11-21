@@ -168,6 +168,15 @@ nav {
   display: none;
 }
 
+.add-product{
+  display: flex;
+gap: 2em;
+  align-items: center;
+}
+.add-product p {
+  font-weight: 600;
+}
+
 /* Desktop View Point */
 @media (min-width: 400px) {
   nav {
