@@ -80,8 +80,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
 }
 .setup-guide-section {
   display: flex;
@@ -90,7 +90,6 @@ nav {
 .dropdown-icons {
   padding: 2em;
   position: relative;
-  
 }
 
 .setup-guide-container .dropdown-icons svg {
@@ -115,13 +114,26 @@ nav {
   width: 20%;
   height: 6px;
 }
+.shown-dropped-down {
+  display: flex;
+  align-items: stretch; /* Add this line to stretch items vertically */
+  gap: 5px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.customize-text-container .customize-text {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+
+
 
 /* Desktop View Point */
-
 @media (min-width: 400px) {
-  body {
-    /* background-color: red; */
-  }
   nav {
     justify-content: space-between;
     padding: 0.5em 2em;
@@ -136,8 +148,8 @@ nav {
   .mobile-logo {
     display: none;
   }
-  .userDP{
-    gap:1em;
+  .userDP {
+    gap: 1em;
   }
   .userDP .collection-container {
     display: flex;
@@ -148,26 +160,26 @@ nav {
     gap: 1em;
     border-radius: 10px;
   }
-.userDP svg{
-   background: #303030;
-   padding: 5px;
+  .userDP svg {
+    background: #303030;
+    padding: 5px;
     border-radius: 10px;
-}
+  }
   .userDP .collection-container .desktop {
     display: block;
   }
-  .p-top{
+  .p-top {
     width: 70%;
     margin: 0 auto;
     /* background-color: green; */
   }
-  .text-content-container{
+  .text-content-container {
     /* background-color: yellow; */
     padding: 0.5em;
     justify-content: space-between;
     border-radius: 10px;
   }
-  .text-content-container div{
+  .text-content-container div {
     display: flex;
     /* background: #000; */
     width: 100%;
@@ -175,14 +187,14 @@ nav {
     justify-content: space-between;
     padding: 0 1em;
   }
-  .text-content-container div button{
-  padding: 10px 18px;
+  .text-content-container div button {
+    padding: 10px 18px;
   }
-  .setup-guide-container{
+  .setup-guide-container {
     border: 1px solid rgba(128, 128, 128, 0.392);
     border-radius: 20px;
   }
-  .dropdown-icons svg{
+  .dropdown-icons svg {
     /* background: #000; */
   }
 }
