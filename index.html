@@ -94,7 +94,8 @@
                 <p>Extend your trial for $1/month for 3 months on select plans.</p>
                 <a href="https://shopify.com/pricing"><button>Select a plan</button></a>
             </div>
-            <svg id="remove-plan-icon" width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="remove-plan-icon" width="41" height="40" viewBox="0 0 21 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z"
                     fill="#fff" />
@@ -129,8 +130,48 @@
                 </div>
             </div>
 
+
             <div class="hidden" id="dropdown">
-                <div class="shown-dropped-down">
+
+                
+                <div class="shown-dropped-down" id="first-step-guide-parent-el">
+                    <div class="progress-checkbox-icon">
+                        <svg class="check-box" id="dropdown-checkbox-empty" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="#4A4A4A" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-dasharray="4 6" />
+                        </svg>
+                        <svg class="check-box" id="dropdown-checkbox-checked" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                        <path
+                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                            fill="#fff"></path>
+                    </svg>
+                    </div>
+
+                    <div class="customize-text-container">
+                        <p class="customize-text" id="step-guide-click">Customize your online store</p>
+                        <div class="hidden" id="show-guide">
+                            <div class="flex">
+                                <div>
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a
+                                            href="#">Learn
+                                            more</a></p>
+                                    <button>Customize theme</button>
+                                </div>
+                                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="ded">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="shown-dropped-down" id="second-step-guide-parent-el">
                     <div>
                         <svg id="dropdown-show-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                             viewBox="0 0 32 32" fill="none">
@@ -138,20 +179,28 @@
                                 stroke-linejoin="round" stroke-dasharray="4 6" />
                         </svg>
                         <!-- <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                        <path
-                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                            fill="#fff"></path>
-                    </svg> -->
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"></path>
+                                    </svg> -->
                     </div>
 
                     <div class="customize-text-container">
-                        <p class="customize-text">Customize your online store</p>
-                        <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a href="#">Learn
-                                more</a></p>
-                        <button>Customize theme</button>
+                        <p class="customize-text" id="step-guide-click-2">Another Guide Title</p>
+                        <div class="hidden" id="show-guide-2">
+                            <div class="flex">
+                                <div>
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a
+                                            href="#">Learn
+                                            more</a></p>
+                                    <button>Customize theme</button>
+                                </div>
+                                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="ded">
+                            </div>
+                        </div>
                     </div>
-                    <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="ded">
+
                 </div>
 
             </div>
