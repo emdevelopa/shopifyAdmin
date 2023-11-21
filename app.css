@@ -91,6 +91,16 @@ nav {
   padding: 2em;
   position: relative;
 }
+.progress-checkbox-icon{
+  /* background: red;  */
+  position: relative; 
+}
+.checkedbox{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
 
 .setup-guide-container .dropdown-icons svg {
   margin-top: 8px;
@@ -111,7 +121,7 @@ nav {
 .completed {
   background: #000;
   border-radius: 5px;
-  width: 20%;
+  width: 0%;
   height: 6px;
 }
 .shown-dropped-down {
@@ -121,7 +131,9 @@ nav {
   border-radius: 15px;
   padding: 5px 10px;
 }
-
+.customize-text-container {
+  padding-bottom: 1em;
+}
 .customize-text-container .customize-text {
   margin: 10px 0 0 0;
   padding: 0;
@@ -145,25 +157,10 @@ nav {
   background: #f1f1f1;
   border-radius: 6px;
 }
-
-.progress-checkbox-icon{
-position: relative;
-background: #000;
-}
-
 #dropdown-hide-icon {
   display: none;
 }
-.check-box{
-  position: absolute;
-}
-#dropdown-checkbox-empty{
-  background: red;
-}
-#dropdown-checkbox-checked{
-  background-color: green;
-  display: none;
-}
+
 .hidden {
   display: none;
 }
