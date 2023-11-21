@@ -21,26 +21,38 @@ nav {
   background: #1a1a1a;
   padding: 1em 0.2em;
 }
+.desktop-logo {
+  display: none;
+}
 
 .search-container {
   background-color: #303030;
-  padding: 0.8em;
+  padding: 0 0.8em;
   border-radius: 8px;
 }
 .search-container input {
   color: #a4a4a4;
-  padding: 0.5em;
+  padding: 1em;
   background: #303030;
   outline: none;
   border: none;
+  width: 100%;
 }
 .userDP {
   gap: 0.2em;
 }
-.userDP div {
+
+.userDP .collection-container .desktop {
+  display: none;
+}
+.userDP .collection-container {
+  background-color: none;
+}
+.userDP .collection-container .mobile {
   background: #36fba1;
   padding: 0.6em;
   border-radius: 8px;
+  color: #22a369;
 }
 .p-top {
   padding-top: 2em;
@@ -104,11 +116,66 @@ nav {
   height: 6px;
 }
 
-@media (min-width:400px) {
-    body{
-        background-color: red;
-    }
-    nav{
-        justify-content: space-between;
-    }
+/* Desktop View Point */
+
+@media (min-width: 400px) {
+  body {
+    /* background-color: red; */
+  }
+  nav {
+    justify-content: space-between;
+    padding: 0.5em 2em;
+  }
+  .search-container {
+    width: 50%;
+    justify-content: start;
+  }
+  .desktop-logo {
+    display: block;
+  }
+  .mobile-logo {
+    display: none;
+  }
+  .userDP{
+    gap:1em;
+  }
+  .userDP .collection-container {
+    display: flex;
+    background: #303030;
+    padding: 3px 3px 3px 8px;
+    align-items: center;
+    color: white;
+    gap: 1em;
+    border-radius: 10px;
+  }
+.userDP svg{
+   background: #303030;
+   padding: 5px;
+    border-radius: 10px;
+}
+  .userDP .collection-container .desktop {
+    display: block;
+  }
+  .p-top{
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: green; */
+  }
+  .text-content-container{
+    /* background-color: yellow; */
+    padding: 0.5em;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  .text-content-container div{
+    display: flex;
+    /* background: #000; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+  .text-content-container div button{
+  padding: 10px 18px;
+  }
 }
