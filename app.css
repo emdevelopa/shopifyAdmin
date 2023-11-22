@@ -262,6 +262,24 @@ nav {
   padding: 0.5em;
   border-bottom: 1px solid rgba(158, 158, 158, 0.393);
 }
+.padding-x-0{
+  padding: 0.5em 2px;
+}
+.padding-x-0 p {
+  padding: 0.5em;
+}
+.username div {
+  display: flex;
+  flex-direction: column;
+}
+.username div h3, .username div .email{
+margin: 0;
+}
+.community-forum{
+  padding: 0.8em 0;
+  border-radius: 10px;
+  border: 2px solid #005BD3;
+}
 /* Desktop View Point */
 @media (min-width: 400px) {
   nav {
