@@ -124,8 +124,8 @@ nav {
   justify-content: space-between;
 }
 .dropdown-icons {
-  padding: 2em;
-  position: relative;
+  /* padding: 2em; */
+  /* position: relative; */
 }
 .progress-checkbox-icon {
   /* background: red;  */
@@ -140,8 +140,8 @@ nav {
 
 .setup-guide-container .dropdown-icons svg {
   margin-top: 8px;
-  position: absolute;
-  top: 5%;
+  /* position: absolute; */
+  /* top: 5%; */
 }
 .progress-bar-container {
   display: flex;

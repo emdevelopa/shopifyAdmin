@@ -43,7 +43,7 @@ notification.addEventListener("click", () => {
 
   if (isPopupVisible) {
     notificationPopUp.style.display = "none";
-    notification.style.background = "#303030";
+    notification.style.background = "transparent";
   } else {
     notificationPopUp.style.display = "block";
   }
