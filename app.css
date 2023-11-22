@@ -58,7 +58,8 @@ nav {
   border-radius: 10px;
   padding: 0.2em;
 }
-.notification-pop-up {
+.notification-pop-up,
+.davii-popup {
   z-index: 1;
   background: #ffffff;
   border-radius: 10px;
@@ -66,8 +67,14 @@ nav {
   position: absolute;
   padding: 1em;
   left: 5%;
-  top: 11%;
+  top: 12%;
   right: 5%;
+}
+.davii-popup {
+  margin: 0;
+  right: 0;
+  left: 20%;
+  padding: 0.5em 1em;
 }
 .userDP .collection-container .desktop {
   display: none;
@@ -75,7 +82,8 @@ nav {
 .userDP .collection-container {
   background-color: none;
 }
-.userDP .collection-container .mobile {
+.userDP .collection-container .mobile,
+.box .mobile {
   background: #36fba1;
   padding: 0.6em;
   border-radius: 8px;
@@ -223,6 +231,22 @@ nav {
   text-align: center;
 }
 
+.box,
+.box .collection-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  justify-content: space-between;
+}
+.collection-name {
+  gap: 1em;
+}
+
+.collection-name h3{
+  margin: 0;
+}
 /* Desktop View Point */
 @media (min-width: 400px) {
   nav {
@@ -292,7 +316,8 @@ nav {
     display: flex;
     justify-content: space-between;
   }
-  .notification-pop-up {
+  .notification-pop-up,
+  .davii-popup {
     left: 65%;
     /* width: 30%; */
     right: 2%;

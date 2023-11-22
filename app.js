@@ -11,7 +11,32 @@ const progressText = document.getElementById("progress-text");
 const notification = document.getElementById("notification");
 const notificationPopUp = document.getElementById("notification-pop-up");
 
+const userDp = document.getElementById("userDP");
+const UserDpPopUp = document.getElementById("userDp-pop-up");
+
 let isPopupVisible = false;
+
+userDp.addEventListener("click", () => {
+  //   userDp.style.border = "1px solid blue";
+
+  if (isPopupVisible) {
+    UserDpPopUp.style.display = "none";
+    userDp.style.border = "none";
+    userDp.style.borderRadius = "0";
+    userDp.style.padding = "0px";
+    userDp.style.background = "transparent";
+  } else {
+    UserDpPopUp.style.display = "block";
+    // userDp.style.border = "1px solid blue";
+    userDp.style.borderRadius = "5px";
+
+    userDp.style.padding = "2px";
+    userDp.style.background = "#656266";
+  }
+
+  // Toggle the popup visibility state
+  isPopupVisible = !isPopupVisible;
+});
 
 notification.addEventListener("click", () => {
   notification.style.background = "#656266";
