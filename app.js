@@ -28,7 +28,7 @@ userDp.addEventListener("click", () => {
   } else {
     UserDpPopUp.style.display = "block";
     // userDp.style.border = "1px solid blue";
-    userDp.style.borderRadius = "5px";
+    userDp.style.borderRadius = "8px";
 
     userDp.style.padding = "2px";
     userDp.style.background = "#656266";

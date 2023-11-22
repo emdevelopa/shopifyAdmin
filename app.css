@@ -11,7 +11,8 @@ html {
 nav,
 .search-container,
 .userDP,
-.text-content-container {
+.text-content-container,
+.all-store {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -72,9 +73,9 @@ nav {
 }
 .davii-popup {
   margin: 0;
-  right: 0;
-  left: 20%;
-  padding: 0.5em 1em;
+  right: 2%;
+  left: 15%;
+  padding: 0;
 }
 .userDP .collection-container .desktop {
   display: none;
@@ -239,13 +240,27 @@ nav {
 }
 .box {
   justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
 }
+.all-store{
+  justify-content: flex-start;
+}
+.all-store p {
+  /* font-size: 20px; */
+}
+
 .collection-name {
   gap: 1em;
 }
 
-.collection-name h3{
+.collection-name h3 {
   margin: 0;
+}
+.padding {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(158, 158, 158, 0.393);
 }
 /* Desktop View Point */
 @media (min-width: 400px) {
