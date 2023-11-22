@@ -17,9 +17,14 @@ nav,
   justify-content: space-around;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 nav {
   background: #1a1a1a;
   padding: 1em 0.2em;
+  gap: 0.4em;
 }
 .desktop-logo {
   display: none;
@@ -38,10 +43,32 @@ nav {
   border: none;
   width: 100%;
 }
+
+.search-container:hover {
+  border: 0.1px solid white;
+}
+.search-container:focus-within {
+  border: 2px solid white;
+}
 .userDP {
   gap: 0.2em;
 }
 
+.notification {
+  border-radius: 10px;
+  padding: 0.2em;
+}
+.notification-pop-up {
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid grey;
+  position: absolute;
+  padding: 1em;
+  left: 5%;
+  top: 11%;
+  right: 5%;
+}
 .userDP .collection-container .desktop {
   display: none;
 }
@@ -66,7 +93,7 @@ nav {
   padding: 8px 16px;
   font-size: 18px;
 }
-.text-content-container div button {
+.text-content-container div a button {
   outline: none;
   border: none;
   padding: 8px 16px;
@@ -76,7 +103,7 @@ nav {
 
 .setup-guide-container {
   background-color: #ffffff;
-  padding:  0 1em 1em;
+  padding: 0 1em 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,11 +118,11 @@ nav {
   padding: 2em;
   position: relative;
 }
-.progress-checkbox-icon{
+.progress-checkbox-icon {
   /* background: red;  */
-  position: relative; 
+  position: relative;
 }
-.checkedbox{
+.checkedbox {
   position: absolute;
   left: 0;
   top: 0;
@@ -137,6 +164,7 @@ nav {
 .customize-text-container .customize-text {
   margin: 10px 0 0 0;
   padding: 0;
+  cursor: pointer;
   font-weight: 600;
 }
 .customize-text-container a {
@@ -152,6 +180,7 @@ nav {
     0px 2px 0px 0px #000;
   color: #fff;
   padding: 6px 12px;
+  cursor: pointer;
 }
 .dropdown-icons svg:hover {
   background: #f1f1f1;
@@ -168,13 +197,30 @@ nav {
   display: none;
 }
 
-.add-product{
+.add-product {
   display: flex;
-gap: 2em;
+  gap: 2em;
   align-items: center;
 }
 .add-product p {
   font-weight: 600;
+}
+.alerts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alerts-container div {
+  display: flex;
+  gap: 1em;
+}
+.alert-content-container {
+  background: #f1f1f1;
+  padding: 0.3em;
+}
+.alert-content-container p {
+  font-weight: 600;
+  text-align: center;
 }
 
 /* Desktop View Point */
@@ -245,5 +291,10 @@ gap: 2em;
   .flex {
     display: flex;
     justify-content: space-between;
+  }
+  .notification-pop-up {
+    left: 65%;
+    /* width: 30%; */
+    right: 2%;
   }
 }

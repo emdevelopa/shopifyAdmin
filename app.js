@@ -8,6 +8,25 @@ const planPopUp = document.getElementById("plan-popup-container");
 const progressBar = document.getElementById("progress-completed");
 const progressText = document.getElementById("progress-text");
 
+const notification = document.getElementById("notification");
+const notificationPopUp = document.getElementById("notification-pop-up");
+
+let isPopupVisible = false;
+
+notification.addEventListener("click", () => {
+  notification.style.background = "#656266";
+
+  if (isPopupVisible) {
+    notificationPopUp.style.display = "none";
+    notification.style.background = "#303030";
+  } else {
+    notificationPopUp.style.display = "block";
+  }
+
+  // Toggle the popup visibility state
+  isPopupVisible = !isPopupVisible;
+});
+
 // First Step checkBox
 const checkboxEmpty1 = document.getElementById("dropdown-checkbox-empty");
 const checkboxChecked1 = document.getElementById("dropdown-checkbox-checked");
