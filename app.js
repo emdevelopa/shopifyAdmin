@@ -122,60 +122,173 @@ function updateProgress() {
 
 checkboxEmpty1.addEventListener("click", () => {
   checkboxChecked1.style.display = "block";
+  secondStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide2.style.display = "block";
+  showGuide1.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount++;
   updateProgress();
 });
 
 checkboxChecked1.addEventListener("click", () => {
   checkboxChecked1.style.display = "none";
+  firstStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "block";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
   completedCount--;
   updateProgress();
 });
 
 checkboxEmpty2.addEventListener("click", () => {
   checkboxChecked2.style.display = "block";
+  thirdStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide3.style.display = "block";
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount++;
   updateProgress();
 });
 
 checkboxChecked2.addEventListener("click", () => {
   checkboxChecked2.style.display = "none";
+  secondStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "block";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount--;
   updateProgress();
 });
 
 checkboxEmpty3.addEventListener("click", () => {
   checkboxChecked3.style.display = "block";
+  fourthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "block";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount++;
   updateProgress();
 });
 
 checkboxChecked3.addEventListener("click", () => {
   checkboxChecked3.style.display = "none";
+  thirdStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "block";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount--;
   updateProgress();
 });
 
 checkboxEmpty4.addEventListener("click", () => {
   checkboxChecked4.style.display = "block";
+  fifthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "block";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
   completedCount++;
   updateProgress();
 });
 
 checkboxChecked4.addEventListener("click", () => {
   checkboxChecked4.style.display = "none";
+  fourthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "block";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
   completedCount--;
   updateProgress();
 });
 
 checkboxEmpty5.addEventListener("click", () => {
   checkboxChecked5.style.display = "block";
+
+  showGuide5.style.display = "none";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
   completedCount++;
   updateProgress();
 });
 
 checkboxChecked5.addEventListener("click", () => {
   checkboxChecked5.style.display = "none";
+  fifthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "block";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
   completedCount--;
   updateProgress();
 });
