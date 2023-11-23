@@ -77,6 +77,16 @@ nav {
   left: 15%;
   padding: 0;
 }
+
+.show-list-item:hover {
+  border-radius: 10px;
+  border: 2px solid #005bd3;
+}
+.community-forum:active {
+  padding: 0.8em 0;
+  border-radius: 10px;
+  border: 2px solid #005bd3;
+}
 .userDP .collection-container .desktop {
   display: none;
 }
@@ -205,6 +215,23 @@ nav {
 .shown-dropped-down img {
   display: none;
 }
+/* .userDP svg{
+   background: #303030;
+  border-radius: 8px;
+} */
+.userDP .collection-container:hover,
+.userDP svg:hover {
+  background-color: #616161;
+}
+.userDP .collection-container {
+  padding: 2px;
+  background: #303030;
+  border-radius: 8px;
+}
+
+.userDP .collection-container:hover {
+  background-color: #616161
+}
 
 .add-product {
   display: flex;
@@ -244,7 +271,7 @@ nav {
   padding: 10px;
   border-radius: 10px;
 }
-.all-store{
+.all-store {
   justify-content: flex-start;
 }
 .all-store p {
@@ -262,7 +289,7 @@ nav {
   padding: 0.5em;
   border-bottom: 1px solid rgba(158, 158, 158, 0.393);
 }
-.padding-x-0{
+.padding-x-0 {
   padding: 0.5em 2px;
 }
 .padding-x-0 p {
@@ -272,14 +299,11 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.username div h3, .username div .email{
-margin: 0;
+.username div h3,
+.username div .email {
+  margin: 0;
 }
-.community-forum{
-  padding: 0.8em 0;
-  border-radius: 10px;
-  border: 2px solid #005BD3;
-}
+
 /* Desktop View Point */
 @media (min-width: 400px) {
   nav {
@@ -308,11 +332,13 @@ margin: 0;
     gap: 1em;
     border-radius: 10px;
   }
+
   .userDP svg {
     background: #303030;
     padding: 5px;
     border-radius: 10px;
   }
+
   .userDP .collection-container .desktop {
     display: block;
   }
@@ -351,7 +377,8 @@ margin: 0;
   }
   .notification-pop-up,
   .davii-popup {
-    left: 65%;
+    left: 70%;
+    top: 10%;
     /* width: 30%; */
     right: 2%;
   }

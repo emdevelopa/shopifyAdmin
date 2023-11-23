@@ -21,16 +21,11 @@ userDp.addEventListener("click", () => {
 
   if (isPopupVisible) {
     UserDpPopUp.style.display = "none";
-    userDp.style.border = "none";
-    userDp.style.borderRadius = "0";
-    userDp.style.padding = "0px";
-    userDp.style.background = "transparent";
+    // userDp.style.border = "none";
+    userDp.style.background = "#303030";
   } else {
     UserDpPopUp.style.display = "block";
-    // userDp.style.border = "1px solid blue";
-    userDp.style.borderRadius = "8px";
-
-    userDp.style.padding = "2px";
+    // userDp.style.border = "2px solid blue";
     userDp.style.background = "#656266";
   }
 
@@ -39,13 +34,14 @@ userDp.addEventListener("click", () => {
 });
 
 notification.addEventListener("click", () => {
-  notification.style.background = "#656266";
-
   if (isPopupVisible) {
+    notification.style.background = "#303030";
     notificationPopUp.style.display = "none";
-    notification.style.background = "transparent";
+    // notification.style.border = "none";
   } else {
+    notification.style.background = "#656266";
     notificationPopUp.style.display = "block";
+    // notification.style.border = "2px solid blue";
   }
 
   // Toggle the popup visibility state
@@ -124,9 +120,6 @@ function updateProgress() {
   progressText.textContent = `${completedCount} / ${totalTasks} completed`;
 }
 
-updateProgress();
-
-// const pb =  document.getElementById("progress-completed")
 checkboxEmpty1.addEventListener("click", () => {
   checkboxChecked1.style.display = "block";
   completedCount++;
