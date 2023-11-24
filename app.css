@@ -202,7 +202,7 @@ nav {
   font-size: 13px;
   font-weight: 600;
 }
-.hidden p{
+.show-guide{
   font-size: 13px;
 }
 .customize-text-container a {
@@ -362,7 +362,7 @@ nav {
     display: block;
   }
   .p-top {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     /* background-color: green; */
   }
