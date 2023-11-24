@@ -391,7 +391,10 @@ nav {
     display: block;
   }
   .flex {
+    /* background: #000; */
+    width: 100%;
     display: flex;
+    gap: 6em;
     justify-content: space-between;
   }
   .notification-pop-up,
