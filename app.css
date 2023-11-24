@@ -202,6 +202,9 @@ nav {
   font-size: 13px;
   font-weight: 600;
 }
+.hidden p{
+  font-size: 13px;
+}
 .customize-text-container a {
   text-decoration: none;
 }
