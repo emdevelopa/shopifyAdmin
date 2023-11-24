@@ -35,6 +35,8 @@ nav {
   background-color: #303030;
   padding: 0 0.8em;
   border-radius: 8px;
+  border: 1px solid #616161;
+
 }
 .search-container input {
   color: #a4a4a4;
@@ -46,7 +48,7 @@ nav {
 }
 
 .search-container:hover {
-  border: 0.1px solid white;
+  border: 1px solid white;
 }
 .search-container:focus-within {
   border: 2px solid white;
@@ -54,10 +56,17 @@ nav {
 .userDP {
   gap: 0.2em;
 }
+#userDP:focus{
+  outline: none;
+  border: 2px solid #005bd3;
+}
 
 .notification {
   border-radius: 10px;
   padding: 0.2em;
+}
+.notification:focus{
+  outline: 2px solid #005bd3;
 }
 .notification-pop-up,
 .davii-popup {
@@ -110,13 +119,14 @@ nav {
   background: #1a1a1a;
   color: white;
   padding: 8px 16px;
-  font-size: 18px;
+  font-size: 13px;
 }
 .text-content-container div a button {
   outline: none;
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -133,12 +143,19 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-.dropdown-icons {
-  /* padding: 2em; */
-  /* position: relative; */
+.setup-guide-section h1{
+  font-size: 14px;
+}
+.setup-guide-section p{
+  font-size: 13px;
+}
+#dropdown-show-icon:focus, #dropdown-hide-icon:focus{
+  outline: none;
+  border: 2px solid #005bd3;
+  border-radius: 10px;
+  background-color: transparent;
 }
 .progress-checkbox-icon {
-  /* background: red;  */
   position: relative;
 }
 .checkedbox {
@@ -150,8 +167,6 @@ nav {
 
 .setup-guide-container .dropdown-icons svg {
   margin-top: 8px;
-  /* position: absolute; */
-  /* top: 5%; */
 }
 .progress-bar-container {
   display: flex;
@@ -181,9 +196,10 @@ nav {
   padding-bottom: 1em;
 }
 .customize-text-container .customize-text {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   padding: 0;
   cursor: pointer;
+  font-size: 13px;
   font-weight: 600;
 }
 .customize-text-container a {
@@ -230,7 +246,7 @@ nav {
 }
 
 .userDP .collection-container:hover {
-  background-color: #616161
+  background-color: #616161;
 }
 
 .add-product {
