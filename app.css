@@ -24,7 +24,7 @@ nav,
 
 nav {
   background: #1a1a1a;
-  padding: 1em 0.2em;
+  padding: 12px 16px;
   gap: 0.4em;
 }
 .desktop-logo {
@@ -36,14 +36,14 @@ nav {
   padding: 0 0.8em;
   border-radius: 8px;
   border: 1px solid #616161;
-
 }
 .search-container input {
   color: #a4a4a4;
-  padding: 1em;
+  padding: 8px;
   background: #303030;
   outline: none;
   border: none;
+  /* font-size: 16px; */
   width: 100%;
 }
 
@@ -54,9 +54,9 @@ nav {
   border: 2px solid white;
 }
 .userDP {
-  gap: 0.2em;
+  gap: 0.5em;
 }
-#userDP:focus{
+#userDP:focus {
   outline: none;
   border: 2px solid #005bd3;
 }
@@ -65,8 +65,16 @@ nav {
   border-radius: 10px;
   padding: 0.2em;
 }
-.notification:focus{
+.notification:hover {
+  background: #303030;
+}
+.notification:focus {
   outline: 2px solid #005bd3;
+  background: #656266;
+}
+.notification:active {
+  outline: 2px solid #005bd3;
+  background: #656266;
 }
 .notification-pop-up,
 .davii-popup {
@@ -99,16 +107,16 @@ nav {
 .userDP .collection-container .desktop {
   display: none;
 }
-.userDP .collection-container {
-  background-color: none;
-}
+
 .userDP .collection-container .mobile,
 .box .mobile {
   background: #36fba1;
-  padding: 0.6em;
+  padding: 9px 8px;
+  font-size: 12px;
   border-radius: 8px;
   color: #22a369;
 }
+
 .p-top {
   padding-top: 2em;
   display: flex;
@@ -124,10 +132,11 @@ nav {
 .text-content-container div a button {
   outline: none;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: bold;
+  padding: 6.62px 13.241px;
+  border-radius: 6.62px;
+  font-size: 13.241px;
+  font-weight: 600;
+  color: #323232;
 }
 
 .setup-guide-container {
@@ -143,18 +152,27 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-.setup-guide-section h1{
+.setup-guide-section h1 {
   font-size: 14px;
 }
-.setup-guide-section p{
+.setup-guide-section p {
   font-size: 13px;
 }
-#dropdown-show-icon:focus, #dropdown-hide-icon:focus{
+.dropdown-icons svg {
+  border-radius: 10px;
+}
+.dropdown-icons svg:hover {
+  background: #f1f1f1;
+}
+.dropdown-icons svg:focus {
   outline: none;
   border: 2px solid #005bd3;
-  border-radius: 10px;
   background-color: transparent;
 }
+.dropdown-icons svg:active {
+  background: #f0f0f0;
+}
+
 .progress-checkbox-icon {
   position: relative;
 }
@@ -167,6 +185,7 @@ nav {
 
 .setup-guide-container .dropdown-icons svg {
   margin-top: 8px;
+  padding: 4px;
 }
 .progress-bar-container {
   display: flex;
@@ -202,7 +221,7 @@ nav {
   font-size: 13px;
   font-weight: 600;
 }
-.show-guide{
+.show-guide {
   font-size: 13px;
 }
 .customize-text-container a {
@@ -220,10 +239,19 @@ nav {
   padding: 6px 12px;
   cursor: pointer;
 }
-.dropdown-icons svg:hover {
-  background: #f1f1f1;
-  border-radius: 6px;
+.customize-text-container button:hover {
+  background: #2a2a2a;
 }
+.customize-text-container button:focus {
+  background: #404040;
+  box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 5px #005bd3,
+    0px 0px 0px 1.5px #333;
+}
+.customize-text-container button:active {
+  background: #2b2b2b;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 3px 0px 0px #000 inset;
+}
+
 #dropdown-hide-icon {
   display: none;
 }
@@ -238,19 +266,21 @@ nav {
    background: #303030;
   border-radius: 8px;
 } */
+
+.userDP .collection-container{
+  border-radius: 5px;
+}
 .userDP .collection-container:hover,
 .userDP svg:hover {
   background-color: #616161;
 }
-.userDP .collection-container {
-  padding: 2px;
-  background: #303030;
-  border-radius: 8px;
-}
 
-.userDP .collection-container:hover {
-  background-color: #616161;
+.userDP .collection-container:focus {
+  padding: 1px;
 }
+/* .notification:focus{
+  
+} */
 
 .add-product {
   display: flex;
@@ -345,21 +375,25 @@ nav {
   .userDP .collection-container {
     display: flex;
     background: #303030;
-    padding: 3px 3px 3px 8px;
+    padding: 2px 2px 2px 8px;
     align-items: center;
     color: white;
     gap: 1em;
     border-radius: 10px;
   }
 
-  .userDP svg {
+  /* .userDP svg {
     background: #303030;
     padding: 5px;
     border-radius: 10px;
-  }
+  } */
+  .userDP .collection-container:focus {
+     padding: 2px 2px 2px 8px;
+}
 
   .userDP .collection-container .desktop {
     display: block;
+    font-size: 12px;
   }
   .p-top {
     width: 70%;

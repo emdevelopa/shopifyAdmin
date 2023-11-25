@@ -14,39 +14,54 @@ const notificationPopUp = document.getElementById("notification-pop-up");
 const userDp = document.getElementById("userDP");
 const UserDpPopUp = document.getElementById("userDp-pop-up");
 
+let isUserDpPopupVisible = false;
 let isPopupVisible = false;
 
 userDp.addEventListener("click", () => {
-  //   userDp.style.border = "1px solid blue";
-
-  if (isPopupVisible) {
-    UserDpPopUp.style.display = "none";
-    // userDp.style.border = "none";
-    userDp.style.background = "#303030";
-  } else {
-    UserDpPopUp.style.display = "block";
-    // userDp.style.border = "2px solid blue";
-    userDp.style.background = "#656266";
-  }
-
-  // Toggle the popup visibility state
-  isPopupVisible = !isPopupVisible;
-});
-
-notification.addEventListener("click", () => {
+  // Close notification popup first, if open
   if (isPopupVisible) {
     notification.style.background = "#303030";
     notificationPopUp.style.display = "none";
-    // notification.style.border = "none";
+    isPopupVisible = false;
+  }
+
+  // Toggle userDp popup
+  if (isUserDpPopupVisible) {
+    UserDpPopUp.style.display = "none";
+    userDp.style.background = "#303030";
+    // userDp.style.padding = "0px";
+
+  } else {
+    UserDpPopUp.style.display = "block";
+    userDp.style.background = "#656266";
+    // userDp.style.padding = "1px";
+  }
+
+  // Toggle the userDp popup visibility state
+  isUserDpPopupVisible = !isUserDpPopupVisible;
+});
+
+notification.addEventListener("click", () => {
+  // Close userDp popup first, if open
+  if (isUserDpPopupVisible) {
+    UserDpPopUp.style.display = "none";
+    // userDp.style.background = "#303030";
+    isUserDpPopupVisible = false;
+  }
+
+  // Toggle notification popup
+  if (isPopupVisible) {
+    notification.style.background = "transparent";
+    notificationPopUp.style.display = "none";
   } else {
     notification.style.background = "#656266";
     notificationPopUp.style.display = "block";
-    // notification.style.border = "2px solid blue";
   }
 
-  // Toggle the popup visibility state
+  // Toggle the notification popup visibility state
   isPopupVisible = !isPopupVisible;
 });
+
 
 // First Step checkBox
 const checkboxEmpty1 = document.getElementById("dropdown-checkbox-empty");
