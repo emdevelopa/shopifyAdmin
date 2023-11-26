@@ -58,22 +58,24 @@ nav {
 }
 #userDP:focus {
   outline: none;
-  border: 2px solid #005bd3;
+  box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #000;
 }
 
 .notification {
+  outline: none;
   border-radius: 10px;
   padding: 0.2em;
 }
+
 .notification:hover {
   background: #303030;
 }
 .notification:focus {
-  outline: 2px solid #005bd3;
+  box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #000;
   background: #656266;
 }
 .notification:active {
-  outline: 2px solid #005bd3;
+  /* outline: 2px solid #005bd3; */
   background: #656266;
 }
 .notification-pop-up,
@@ -95,14 +97,31 @@ nav {
   padding: 0;
 }
 
-.show-list-item:hover {
+/* .show-list-item:hover {
   border-radius: 10px;
+  border: 2px solid #005bd3;
+} */
+.user-menu-buttons p {
+  /* padding: 6PX 0; */
+  border-radius: 6px;
+}
+.user-menu-buttons p:hover,
+.all-store:hover,
+.username div:hover,
+.username p:hover {
+  background: #e7e7e7;
+}
+.user-menu-buttons p:focus,
+.all-store:focus,
+.username div:focus,
+.username p:focus {
   border: 2px solid #005bd3;
 }
-.community-forum:active {
-  padding: 0.8em 0;
-  border-radius: 10px;
-  border: 2px solid #005bd3;
+.user-menu-buttons p:active,
+.all-store:active,
+.username div:active,
+.username p:active {
+  background: #e0e0e0;
 }
 .userDP .collection-container .desktop {
   display: none;
@@ -129,8 +148,18 @@ nav {
   padding: 12px 8px 12px 16px;
   /* padding: 8px 16px; */
   font-size: 13px;
+  align-items: flex-start;
 }
-.text-content-container div a button {
+.text-content-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.text-content-container div p {
+  margin: 0;
+}
+.text-content-container div button {
+  background: #f7f7f7;
   outline: none;
   border: none;
   padding: 6px 12px;
@@ -139,14 +168,21 @@ nav {
   font-weight: 600;
   color: #323232;
 }
+.text-content-container svg {
+  margin-top: 1px;
+}
 
-.text-content-container div button:hover {
-  border-radius: 6px;
+.text-content-container div button:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #f7f7f7;
+  box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #fff,
+    0px -1px 0px 0px #b5b5b5 inset;
+}
+.text-content-container div button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
 }
-.text-content-container div button {
+.text-content-container div button:active {
+  box-shadow: 0px 2px 1.5px 0px #e2e2e2 inset;
 }
 
 .setup-guide-container {
@@ -249,13 +285,14 @@ nav {
   padding: 6px 12px;
   cursor: pointer;
 }
-.customize-text-container button:hover {
-  background: #2a2a2a;
-}
+
 .customize-text-container button:focus {
   background: #404040;
   box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 5px #005bd3,
     0px 0px 0px 1.5px #333;
+}
+.customize-text-container button:hover {
+  background: #2a2a2a;
 }
 .customize-text-container button:active {
   background: #2b2b2b;
@@ -288,9 +325,6 @@ nav {
 .userDP .collection-container:focus {
   padding: 1px;
 }
-/* .notification:focus{
-  
-} */
 
 .add-product {
   display: flex;
@@ -299,22 +333,41 @@ nav {
 }
 .add-product p {
   font-weight: 600;
+  color: #616161;
+}
+.notification-pop-up .flex-notification-pop-up {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .alerts-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.alerts-container h3 {
+  font-size: 14px;
+  margin: 0;
+}
 .alerts-container div {
   display: flex;
   gap: 1em;
 }
+.alerts-container div svg {
+  outline: none;
+  padding: 4px;
+  border-radius: 8px;
+}
+.alerts-container div svg:focus {
+  border: 2px solid #005bd3;
+}
 .alert-content-container {
   background: #f1f1f1;
-  padding: 0.3em;
+  padding: 16px;
 }
 .alert-content-container p {
   font-weight: 600;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -327,36 +380,74 @@ nav {
 .box {
   justify-content: space-between;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 4px 12px 4px 8px;
   border-radius: 10px;
+  margin-bottom: 4px;
 }
 .all-store {
   justify-content: flex-start;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.user-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.all-store p,
+.user-menu-buttons p {
+  font-size: 13px;
 }
 .all-store p {
-  /* font-size: 20px; */
+  margin: 0;
 }
 
 .collection-name {
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .collection-name h3 {
   margin: 0;
+  font-size: 13px;
 }
 .padding {
   padding: 0.5em;
   border-bottom: 1px solid rgba(158, 158, 158, 0.393);
 }
 .padding-x-0 {
-  padding: 0.5em 2px;
+  padding: 0.5em 3px;
 }
 .padding-x-0 p {
-  padding: 0.5em;
+  margin: 0;
+  padding: 6px;
+}
+.username {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.5em 3px;
 }
 .username div {
   display: flex;
   flex-direction: column;
+}
+.username div h3,
+.username p {
+  font-size: 13px;
+  margin: 0;
+}
+.username p,
+.username div {
+  border-radius: 6px;
+
+  padding: 6px;
+}
+.username div .email {
+  color: #616161;
+  font-size: 12px;
+  padding: 0;
 }
 .username div h3,
 .username div .email {
@@ -406,28 +497,23 @@ nav {
     font-size: 12px;
   }
   .p-top {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     /* background-color: green; */
   }
   .text-content-container {
-    /* background-color: yellow; */
-    /* padding: 0.5em; */
     justify-content: space-between;
     border-radius: 10px;
+    gap: 18px;
+    align-items: center;
   }
+
   .text-content-container div {
-    display: flex;
-    /* background: #000; */
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em;
+    flex-direction: row;
   }
-  .text-content-container div button {
-    padding: 6px 12px;
-  }
-
   .setup-guide-container {
     border: 1px solid rgba(128, 128, 128, 0.392);
     border-radius: 20px;
@@ -442,11 +528,16 @@ nav {
     gap: 6em;
     justify-content: space-between;
   }
-  .notification-pop-up,
+
   .davii-popup {
-    left: 70%;
+    left: 74%;
     top: 10%;
     /* width: 30%; */
-    right: 2%;
+    right: 1%;
+  }
+  .notification-pop-up {
+    left: 70%;
+    top: 10%;
+    right: 1%;
   }
 }
