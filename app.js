@@ -17,6 +17,22 @@ const UserDpPopUp = document.getElementById("userDp-pop-up");
 let isUserDpPopupVisible = false;
 let isPopupVisible = false;
 
+// const svgs = document.getElementById("dropdown-checkbox-empty-2");
+// console.log(svgs);
+
+// Add event listener for each SVG
+// svgs.forEach((svg) => {
+  // svgs.addEventListener("keydown", function (event) {
+  //   // Check if the pressed key is Enter (key code 13)
+  //   if (event.keyCode === 13) {
+  //     // Toggle the aria-checked attribute
+  //     console.log("hello");
+  //     const isChecked = this.getAttribute("aria-checked") === "true";
+  //     this.setAttribute("aria-checked", !isChecked);
+  //   }
+  // });
+// });
+
 userDp.addEventListener("click", () => {
   // Close notification popup first, if open
   if (isPopupVisible) {
