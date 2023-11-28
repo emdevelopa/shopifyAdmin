@@ -105,8 +105,6 @@ notification.addEventListener("click", () => {
   showNotificationPopup();
 });
 
-
-
 // Show dropdown when showDropdownIcon is clicked, and hide the icon
 function showStepsGuide() {
   showDropdownIcon.style.display = "none";
@@ -235,7 +233,6 @@ stepGuideClick5.addEventListener("click", () => {
   showStepFive();
 });
 
-
 // Toggle Checked Functions
 function firstGuideToggleChecked() {
   if (event.target.classList.contains("unchecked-circle")) {
@@ -257,7 +254,6 @@ function firstGuideToggleChecked() {
     setTimeout(stopLoop, svgs.length * 200);
   }
 }
-
 
 function secondGuideToggleChecked() {
   if (event.target.classList.contains("unchecked-circle2")) {
@@ -281,7 +277,6 @@ function secondGuideToggleChecked() {
   }
 }
 
-
 function thirdGuideToggleChecked() {
   if (event.target.classList.contains("unchecked-circle3")) {
     fourthStepGuide.style.backgroundColor = "#f3f3f3";
@@ -304,11 +299,10 @@ function thirdGuideToggleChecked() {
   }
 }
 
-
 function fourthGuideToggleChecked() {
   if (event.target.classList.contains("unchecked-circle4")) {
     fifthStepGuide.style.backgroundColor = "#f3f3f3";
-    
+
     showGuide2.style.display = "none";
     showGuide1.style.display = "none";
     showGuide3.style.display = "none";
@@ -384,7 +378,6 @@ function secondGuideToggleUnChecked() {
   completedCount--;
   updateProgress();
 }
-
 
 function thirdGuideToggleUnChecked() {
   thirdStepGuide.style.backgroundColor = "#f3f3f3";
@@ -508,7 +501,6 @@ function stopLoop() {
 uncheckedCircleParentElement.addEventListener("click", (event) => {
   firstGuideToggleChecked();
 });
-
 
 const uncheckedCircleParentElement2 = document.getElementById("check2");
 const svgs2 = [
@@ -754,12 +746,12 @@ function stopLoop5() {
   console.log(checkedSVG5);
 
   checkedSVG5.addEventListener("click", () => {
-    fifthGuideToggleChecked();
+    fifthGuideToggleUnChecked();
   });
 }
 
 uncheckedCircleParentElement5.addEventListener("click", (event) => {
-  fifthGuideToggleUnChecked();
+  fifthGuideToggleChecked();
 });
 
 document.addEventListener("keydown", function (event) {
