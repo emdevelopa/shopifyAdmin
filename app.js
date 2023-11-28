@@ -3,17 +3,50 @@ const showDropdownIcon = document.getElementById("dropdown-show-icon");
 const hideDropdownIcon = document.getElementById("dropdown-hide-icon");
 const dropdown = document.getElementById("dropdown");
 
+// DOM Elements for remove-plan-X-icon
 const removePlan = document.getElementById("remove-plan-icon");
 const planPopUp = document.getElementById("plan-popup-container");
 
+// DOM Elements for Progress Bar
 const progressBar = document.getElementById("progress-completed");
 const progressText = document.getElementById("progress-text");
 
+// DOM Elements for notification
 const notification = document.getElementById("notification");
 const notificationPopUp = document.getElementById("notification-pop-up");
 
+// DOM Elements for Davii Collection Menu
 const userDp = document.getElementById("userDP");
 const UserDpPopUp = document.getElementById("userDp-pop-up");
+
+// DOM Elements for First Step
+const stepGuideClick1 = document.getElementById("step-guide-click");
+const showGuide1 = document.getElementById("show-guide");
+const firstStepGuide = document.getElementById("first-step-guide-parent-el");
+
+// DOM Elements for Second Step
+const stepGuideClick2 = document.getElementById("step-guide-click-2");
+const showGuide2 = document.getElementById("show-guide-2");
+const secondStepGuide = document.getElementById("second-step-guide-parent-el");
+
+// DOM Elements for Third Step
+const stepGuideClick3 = document.getElementById("step-guide-click-3");
+const showGuide3 = document.getElementById("show-guide-3");
+const thirdStepGuide = document.getElementById("third-step-guide-parent-el");
+
+// DOM Elements for Fourth Step
+const stepGuideClick4 = document.getElementById("step-guide-click-4");
+const showGuide4 = document.getElementById("show-guide-4");
+const fourthStepGuide = document.getElementById("fourth-step-guide-parent-el");
+
+// DOM Elements for Fifth Step
+const stepGuideClick5 = document.getElementById("step-guide-click-5");
+const showGuide5 = document.getElementById("show-guide-5");
+const fifthStepGuide = document.getElementById("fifth-step-guide-parent-el");
+
+// Counter Variables
+let completedCount = 0;
+const totalTasks = 5;
 
 // State Variables
 let isUserDpPopupVisible = false;
@@ -72,34 +105,7 @@ notification.addEventListener("click", () => {
   showNotificationPopup();
 });
 
-// DOM Elements for First Step
-const stepGuideClick1 = document.getElementById("step-guide-click");
-const showGuide1 = document.getElementById("show-guide");
-const firstStepGuide = document.getElementById("first-step-guide-parent-el");
 
-// DOM Elements for Second Step
-const stepGuideClick2 = document.getElementById("step-guide-click-2");
-const showGuide2 = document.getElementById("show-guide-2");
-const secondStepGuide = document.getElementById("second-step-guide-parent-el");
-
-// DOM Elements for Third Step
-const stepGuideClick3 = document.getElementById("step-guide-click-3");
-const showGuide3 = document.getElementById("show-guide-3");
-const thirdStepGuide = document.getElementById("third-step-guide-parent-el");
-
-// DOM Elements for Fourth Step
-const stepGuideClick4 = document.getElementById("step-guide-click-4");
-const showGuide4 = document.getElementById("show-guide-4");
-const fourthStepGuide = document.getElementById("fourth-step-guide-parent-el");
-
-// DOM Elements for Fifth Step
-const stepGuideClick5 = document.getElementById("step-guide-click-5");
-const showGuide5 = document.getElementById("show-guide-5");
-const fifthStepGuide = document.getElementById("fifth-step-guide-parent-el");
-
-// Counter Variables
-let completedCount = 0;
-const totalTasks = 5;
 
 // Show dropdown when showDropdownIcon is clicked, and hide the icon
 function showStepsGuide() {
@@ -136,7 +142,7 @@ function updateProgress() {
   progressText.textContent = `${completedCount} / ${totalTasks} completed`;
 }
 
-// Add click event listeners for each guide
+// Functions to show each steps
 function showStepOne() {
   showGuide1.style.display = "block";
   firstStepGuide.style.backgroundColor = "#f3f3f3";
@@ -152,10 +158,6 @@ function showStepOne() {
   fifthStepGuide.style.backgroundColor = "transparent";
 }
 
-stepGuideClick1.addEventListener("click", () => {
-  showStepOne();
-});
-
 function showStepTwo() {
   showGuide2.style.display = "block";
   secondStepGuide.style.backgroundColor = "#f3f3f3";
@@ -169,9 +171,6 @@ function showStepTwo() {
   fourthStepGuide.style.backgroundColor = "transparent";
   fifthStepGuide.style.backgroundColor = "transparent";
 }
-stepGuideClick2.addEventListener("click", () => {
-  showStepTwo();
-});
 
 function showStepThree() {
   showGuide3.style.display = "block";
@@ -188,10 +187,6 @@ function showStepThree() {
   fifthStepGuide.style.backgroundColor = "transparent";
 }
 
-stepGuideClick3.addEventListener("click", () => {
-  showStepThree();
-});
-
 function showStepFour() {
   showGuide4.style.display = "block";
   fourthStepGuide.style.backgroundColor = "#f3f3f3";
@@ -206,9 +201,6 @@ function showStepFour() {
   thirdStepGuide.style.backgroundColor = "transparent";
   fifthStepGuide.style.backgroundColor = "transparent";
 }
-stepGuideClick4.addEventListener("click", () => {
-  showStepFour();
-});
 
 function showStepFive() {
   showGuide5.style.display = "block";
@@ -224,12 +216,235 @@ function showStepFive() {
   thirdStepGuide.style.backgroundColor = "transparent";
   fourthStepGuide.style.backgroundColor = "transparent";
 }
+
+// Add click event listeners for each guide
+stepGuideClick1.addEventListener("click", () => {
+  showStepOne();
+});
+stepGuideClick2.addEventListener("click", () => {
+  showStepTwo();
+});
+
+stepGuideClick3.addEventListener("click", () => {
+  showStepThree();
+});
+stepGuideClick4.addEventListener("click", () => {
+  showStepFour();
+});
 stepGuideClick5.addEventListener("click", () => {
   showStepFive();
 });
 
-const uncheckedCircleParentElement = document.getElementById("check");
 
+// Toggle Checked Functions
+function firstGuideToggleChecked() {
+  if (event.target.classList.contains("unchecked-circle")) {
+    secondStepGuide.style.backgroundColor = "#f3f3f3";
+    showGuide2.style.display = "block";
+    showGuide1.style.display = "none";
+    showGuide3.style.display = "none";
+    showGuide4.style.display = "none";
+    showGuide5.style.display = "none";
+
+    firstStepGuide.style.backgroundColor = "transparent";
+    thirdStepGuide.style.backgroundColor = "transparent";
+    fourthStepGuide.style.backgroundColor = "transparent";
+    fifthStepGuide.style.backgroundColor = "transparent";
+    completedCount++;
+    updateProgress();
+    isLooping = true;
+    loop();
+    setTimeout(stopLoop, svgs.length * 200);
+  }
+}
+
+
+function secondGuideToggleChecked() {
+  if (event.target.classList.contains("unchecked-circle2")) {
+    thirdStepGuide.style.backgroundColor = "#f3f3f3";
+
+    showGuide2.style.display = "none";
+    showGuide1.style.display = "none";
+    showGuide3.style.display = "block";
+    showGuide4.style.display = "none";
+    showGuide5.style.display = "none";
+
+    firstStepGuide.style.backgroundColor = "transparent";
+    secondStepGuide.style.backgroundColor = "transparent";
+    fourthStepGuide.style.backgroundColor = "transparent";
+    fifthStepGuide.style.backgroundColor = "transparent";
+    completedCount++;
+    updateProgress();
+    isLooping2 = true;
+    loop2();
+    setTimeout(stopLoop2, svgs2.length * 200);
+  }
+}
+
+
+function thirdGuideToggleChecked() {
+  if (event.target.classList.contains("unchecked-circle3")) {
+    fourthStepGuide.style.backgroundColor = "#f3f3f3";
+
+    showGuide2.style.display = "none";
+    showGuide1.style.display = "none";
+    showGuide3.style.display = "none";
+    showGuide4.style.display = "block";
+    showGuide5.style.display = "none";
+
+    firstStepGuide.style.backgroundColor = "transparent";
+    thirdStepGuide.style.backgroundColor = "transparent";
+    secondStepGuide.style.backgroundColor = "transparent";
+    fifthStepGuide.style.backgroundColor = "transparent";
+    completedCount++;
+    updateProgress();
+    isLooping3 = true;
+    loop3();
+    setTimeout(stopLoop3, svgs3.length * 200);
+  }
+}
+
+
+function fourthGuideToggleChecked() {
+  if (event.target.classList.contains("unchecked-circle4")) {
+    fifthStepGuide.style.backgroundColor = "#f3f3f3";
+    
+    showGuide2.style.display = "none";
+    showGuide1.style.display = "none";
+    showGuide3.style.display = "none";
+    showGuide4.style.display = "none";
+    showGuide5.style.display = "block";
+
+    firstStepGuide.style.backgroundColor = "transparent";
+    thirdStepGuide.style.backgroundColor = "transparent";
+    secondStepGuide.style.backgroundColor = "transparent";
+    fourthStepGuide.style.backgroundColor = "transparent";
+    completedCount++;
+    updateProgress();
+    isLooping4 = true;
+    loop4();
+    setTimeout(stopLoop4, svgs4.length * 200);
+  }
+}
+
+function fifthGuideToggleChecked() {
+  if (event.target.classList.contains("unchecked-circle5")) {
+    fifthStepGuide.style.backgroundColor = "transparent";
+
+    showGuide5.style.display = "none";
+
+    fifthStepGuide.style.backgroundColor = "transparent";
+    completedCount++;
+    updateProgress();
+    isLooping5 = true;
+    loop5();
+    setTimeout(stopLoop5, svgs5.length * 200);
+  }
+}
+
+// Toggle Unchecked Functions
+function firstGuideToggleUnChecked() {
+  //  checkboxChecked1.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "block";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  secondStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
+  uncheckedCircleParentElement.innerHTML = `<div class="unchecked-circle unchecked-circle1" id="checkbox"
+                                aria-label="step one not checked" tabindex="0"></div>`;
+  completedCount--;
+  updateProgress();
+}
+
+function secondGuideToggleUnChecked() {
+  secondStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "block";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  firstStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
+  uncheckedCircleParentElement2.innerHTML = `<div class="unchecked-circle unchecked-circle2" id="checkbox"
+                                aria-label="step two not checked" tabindex="0"></div>`;
+  completedCount--;
+  updateProgress();
+}
+
+
+function thirdGuideToggleUnChecked() {
+  thirdStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "block";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "none";
+
+  secondStepGuide.style.backgroundColor = "transparent";
+  firstStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
+  uncheckedCircleParentElement3.innerHTML = `<div class="unchecked-circle unchecked-circle3" id="checkbox"
+                                aria-label="step three not checked" tabindex="0"></div>`;
+  completedCount--;
+  updateProgress();
+}
+
+function fourthGuideToggleUnChecked() {
+  fourthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "block";
+  showGuide5.style.display = "none";
+
+  secondStepGuide.style.backgroundColor = "transparent";
+  firstStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fifthStepGuide.style.backgroundColor = "transparent";
+
+  uncheckedCircleParentElement4.innerHTML = `<div class="unchecked-circle unchecked-circle4" id="checkbox"  aria-label="step four not checked" tabindex="0"></div>`;
+  completedCount--;
+  updateProgress();
+}
+
+function fifthGuideToggleUnChecked() {
+  fifthStepGuide.style.backgroundColor = "#f3f3f3";
+
+  showGuide1.style.display = "none";
+  showGuide2.style.display = "none";
+  showGuide3.style.display = "none";
+  showGuide4.style.display = "none";
+  showGuide5.style.display = "block";
+
+  secondStepGuide.style.backgroundColor = "transparent";
+  firstStepGuide.style.backgroundColor = "transparent";
+  thirdStepGuide.style.backgroundColor = "transparent";
+  fourthStepGuide.style.backgroundColor = "transparent";
+
+  uncheckedCircleParentElement5.innerHTML = `<div class="unchecked-circle unchecked-circle5" id="checkbox"  aria-label="step fifth not checked" tabindex="0"></div>`;
+  completedCount--;
+  updateProgress();
+}
+
+const uncheckedCircleParentElement = document.getElementById("check");
 const svgs = [
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -253,7 +468,7 @@ const svgs = [
                 fill="white" />
         </g>
     </svg>`,
-  ` <svg class="checkedbox pointer" tabindex="0" id="dropdown-checkbox-checked" aria-label="check" role="checkbox" width="24" height="24"
+  ` <svg class="checkedbox pointer" tabindex="0" aria-label="first-step-completed" id="dropdown-checkbox-checked"  width="24" height="24"
         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" fill="#303030"></circle>
         <path
@@ -261,6 +476,7 @@ const svgs = [
             fill="#fff"></path>
     </svg>`,
 ];
+
 let currentSvgIndex = 0;
 let isLooping = false;
 
@@ -279,59 +495,20 @@ function loop() {
   }
 }
 
-// Function to stop the loop
 function stopLoop() {
   isLooping = false;
-
   const checkedSVG = document.getElementById("dropdown-checkbox-checked");
   console.log(checkedSVG);
+
   checkedSVG.addEventListener("click", () => {
-    //  checkboxChecked1.style.display = "none";
-
-    firstStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide1.style.display = "block";
-    showGuide2.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "none";
-
-    secondStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    uncheckedCircleParentElement.innerHTML = `<div class="unchecked-circle" id="checkbox" tabindex="0 aria-label="unchecked" role="checkbox" id="checkbox"></div>`;
-    completedCount--;
-    updateProgress();
+    firstGuideToggleUnChecked();
   });
 }
 
-function firstGuideToggleChecked() {
-  if (event.target.classList.contains("unchecked-circle")) {
-    secondStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide2.style.display = "block";
-    showGuide1.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "none";
-
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-    completedCount++;
-    updateProgress();
-    isLooping = true;
-    loop();
-    setTimeout(stopLoop, svgs.length * 200);
-  }
-}
 uncheckedCircleParentElement.addEventListener("click", (event) => {
-  // checkboxChecked1.style.display = "block";
   firstGuideToggleChecked();
 });
+
 
 const uncheckedCircleParentElement2 = document.getElementById("check2");
 const svgs2 = [
@@ -357,7 +534,7 @@ const svgs2 = [
                 fill="white" />
         </g>
     </svg>`,
-  ` <svg class="checkedbox pointer" tabindex="0" id="dropdown-checkbox-checked2" width="24" height="24"
+  ` <svg class="checkedbox pointer" tabindex="0" aria-label="second-step-completed" id="dropdown-checkbox-checked2" width="24" height="24"
         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" fill="#303030"></circle>
         <path
@@ -370,7 +547,6 @@ let currentSvgIndex2 = 0;
 let isLooping2 = false;
 
 function displayCurrentSvg2() {
-  // uncheckedCircleParentElement.innerHTML = `<div class="circc" id="checkbox"></div>`;
   document.getElementById("check2").innerHTML = svgs2[currentSvgIndex2];
 }
 
@@ -389,49 +565,12 @@ function stopLoop2() {
   console.log(checkedSVG2);
 
   checkedSVG2.addEventListener("click", () => {
-    //  checkboxChecked1.style.display = "none";
-
-    secondStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide1.style.display = "none";
-    showGuide2.style.display = "block";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "none";
-
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    uncheckedCircleParentElement2.innerHTML = `<div class="unchecked-circle unchecked-circle2" id="checkbox"></div>`;
-    completedCount--;
-    updateProgress();
+    secondGuideToggleUnChecked();
   });
 }
 
 uncheckedCircleParentElement2.addEventListener("click", (event) => {
-  // checkboxChecked1.style.display = "block";
-
-  if (event.target.classList.contains("unchecked-circle2")) {
-    thirdStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide2.style.display = "none";
-    showGuide1.style.display = "none";
-    showGuide3.style.display = "block";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "none";
-
-    firstStepGuide.style.backgroundColor = "transparent";
-    secondStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-    completedCount++;
-    updateProgress();
-    isLooping2 = true;
-    loop2();
-    setTimeout(stopLoop2, svgs2.length * 200);
-  }
+  secondGuideToggleChecked();
 });
 
 const uncheckedCircleParentElement3 = document.getElementById("check3");
@@ -458,7 +597,7 @@ const svgs3 = [
                 fill="white" />
         </g>
     </svg>`,
-  ` <svg class="checkedbox pointer" tabindex="0" id="dropdown-checkbox-checked3" width="24" height="24"
+  ` <svg class="checkedbox pointer" tabindex="0" aria-label="third-step-completed" id="dropdown-checkbox-checked3" width="24" height="24"
         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" fill="#303030"></circle>
         <path
@@ -471,7 +610,6 @@ let currentSvgIndex3 = 0;
 let isLooping3 = false;
 
 function displayCurrentSvg3() {
-  // uncheckedCircleParentElement.innerHTML = `<div class="circc" id="checkbox"></div>`;
   document.getElementById("check3").innerHTML = svgs3[currentSvgIndex3];
 }
 
@@ -490,49 +628,12 @@ function stopLoop3() {
   console.log(checkedSVG3);
 
   checkedSVG3.addEventListener("click", () => {
-    //  checkboxChecked1.style.display = "none";
-
-    thirdStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide1.style.display = "none";
-    showGuide2.style.display = "none";
-    showGuide3.style.display = "block";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "none";
-
-    secondStepGuide.style.backgroundColor = "transparent";
-    firstStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    uncheckedCircleParentElement3.innerHTML = `<div class="unchecked-circle unchecked-circle3" id="checkbox"></div>`;
-    completedCount--;
-    updateProgress();
+    thirdGuideToggleUnChecked();
   });
 }
 
 uncheckedCircleParentElement3.addEventListener("click", (event) => {
-  // checkboxChecked1.style.display = "block";
-
-  if (event.target.classList.contains("unchecked-circle3")) {
-    fourthStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide2.style.display = "none";
-    showGuide1.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "block";
-    showGuide5.style.display = "none";
-
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    secondStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-    completedCount++;
-    updateProgress();
-    isLooping3 = true;
-    loop3();
-    setTimeout(stopLoop3, svgs3.length * 200);
-  }
+  thirdGuideToggleChecked();
 });
 
 const uncheckedCircleParentElement4 = document.getElementById("check4");
@@ -559,7 +660,7 @@ const svgs4 = [
                 fill="white" />
         </g>
     </svg>`,
-  ` <svg class="checkedbox pointer" tabindex="0" id="dropdown-checkbox-checked4" width="24" height="24"
+  ` <svg class="checkedbox pointer" tabindex="0" aria-label="fourth-step-completed"  id="dropdown-checkbox-checked4" width="24" height="24"
         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" fill="#303030"></circle>
         <path
@@ -572,7 +673,6 @@ let currentSvgIndex4 = 0;
 let isLooping4 = false;
 
 function displayCurrentSvg4() {
-  // uncheckedCircleParentElement.innerHTML = `<div class="circc" id="checkbox"></div>`;
   document.getElementById("check4").innerHTML = svgs4[currentSvgIndex4];
 }
 
@@ -591,49 +691,12 @@ function stopLoop4() {
   console.log(checkedSVG4);
 
   checkedSVG4.addEventListener("click", () => {
-    //  checkboxChecked1.style.display = "none";
-
-    fourthStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide1.style.display = "none";
-    showGuide2.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "block";
-    showGuide5.style.display = "none";
-
-    secondStepGuide.style.backgroundColor = "transparent";
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    uncheckedCircleParentElement4.innerHTML = `<div class="unchecked-circle unchecked-circle4" id="checkbox"></div>`;
-    completedCount--;
-    updateProgress();
+    fourthGuideToggleUnChecked();
   });
 }
 
 uncheckedCircleParentElement4.addEventListener("click", (event) => {
-  // checkboxChecked1.style.display = "block";
-
-  if (event.target.classList.contains("unchecked-circle4")) {
-    fifthStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide2.style.display = "none";
-    showGuide1.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "none";
-    showGuide5.style.display = "block";
-
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    secondStepGuide.style.backgroundColor = "transparent";
-    fourthStepGuide.style.backgroundColor = "transparent";
-    completedCount++;
-    updateProgress();
-    isLooping4 = true;
-    loop4();
-    setTimeout(stopLoop4, svgs4.length * 200);
-  }
+  fourthGuideToggleChecked();
 });
 
 const uncheckedCircleParentElement5 = document.getElementById("check5");
@@ -660,7 +723,7 @@ const svgs5 = [
                 fill="white" />
         </g>
     </svg>`,
-  ` <svg class="checkedbox pointer" tabindex="0" id="dropdown-checkbox-checked5" width="24" height="24"
+  ` <svg class="checkedbox pointer" tabindex="0" aria-label="fifth-step-completed" id="dropdown-checkbox-checked5" width="24" height="24"
         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" fill="#303030"></circle>
         <path
@@ -673,7 +736,6 @@ let currentSvgIndex5 = 0;
 let isLooping5 = false;
 
 function displayCurrentSvg5() {
-  // uncheckedCircleParentElement.innerHTML = `<div class="circc" id="checkbox"></div>`;
   document.getElementById("check5").innerHTML = svgs5[currentSvgIndex5];
 }
 
@@ -692,48 +754,18 @@ function stopLoop5() {
   console.log(checkedSVG5);
 
   checkedSVG5.addEventListener("click", () => {
-    //  checkboxChecked1.style.display = "none";
-
-    fourthStepGuide.style.backgroundColor = "#f3f3f3";
-
-    showGuide1.style.display = "none";
-    showGuide2.style.display = "none";
-    showGuide3.style.display = "none";
-    showGuide4.style.display = "block";
-    showGuide5.style.display = "none";
-
-    secondStepGuide.style.backgroundColor = "transparent";
-    firstStepGuide.style.backgroundColor = "transparent";
-    thirdStepGuide.style.backgroundColor = "transparent";
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    uncheckedCircleParentElement5.innerHTML = `<div class="unchecked-circle unchecked-circle5" id="checkbox"></div>`;
-    completedCount--;
-    updateProgress();
+    fifthGuideToggleChecked();
   });
 }
 
 uncheckedCircleParentElement5.addEventListener("click", (event) => {
-  // checkboxChecked1.style.display = "block";
-
-  if (event.target.classList.contains("unchecked-circle5")) {
-    fifthStepGuide.style.backgroundColor = "transparent";
-
-    showGuide5.style.display = "none";
-
-    fifthStepGuide.style.backgroundColor = "transparent";
-    completedCount++;
-    updateProgress();
-    isLooping5 = true;
-    loop5();
-    setTimeout(stopLoop5, svgs5.length * 200);
-  }
+  fifthGuideToggleUnChecked();
 });
 
 document.addEventListener("keydown", function (event) {
   if (event.keyCode === 13) {
-    // Call your function here
-    // console.log(event.target.id);
+    console.log(event.target.id);
+
     if (event.target.id === "notification") {
       showNotificationPopup();
     }
@@ -749,9 +781,41 @@ document.addEventListener("keydown", function (event) {
     if (event.target.id === "remove-plan-icon") {
       planPopUp.style.display = "none";
     }
-    if (event.target.id === "checkbox") {
+
+    // Using Enter key on  keyboard to Toggle completed and uncompleted steps
+    if (event.target.classList.contains("unchecked-circle1")) {
+      console.log("yes it contains");
       firstGuideToggleChecked();
     }
+    if (event.target.id === "dropdown-checkbox-checked") {
+      firstGuideToggleUnChecked();
+    }
+    if (event.target.classList.contains("unchecked-circle2")) {
+      secondGuideToggleChecked();
+    }
+    if (event.target.id === "dropdown-checkbox-checked2") {
+      secondGuideToggleUnChecked();
+    }
+    if (event.target.classList.contains("unchecked-circle3")) {
+      thirdGuideToggleChecked();
+    }
+    if (event.target.id === "dropdown-checkbox-checked3") {
+      thirdGuideToggleUnChecked();
+    }
+    if (event.target.classList.contains("unchecked-circle4")) {
+      fourthGuideToggleChecked();
+    }
+    if (event.target.id === "dropdown-checkbox-checked4") {
+      fourthGuideToggleUnChecked();
+    }
+    if (event.target.classList.contains("unchecked-circle5")) {
+      fifthGuideToggleChecked();
+    }
+    if (event.target.id === "dropdown-checkbox-checked5") {
+      fifthGuideToggleUnChecked();
+    }
+
+    // Using Enter key on  keyboard to go through Steps
     if (event.target.id === "step-guide-click") {
       showStepOne();
     }
