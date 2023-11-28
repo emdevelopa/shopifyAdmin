@@ -17,6 +17,26 @@ nav,
   align-items: center;
   justify-content: space-around;
 }
+.check {
+  /* height: 4em; */
+  position: relative;
+  padding: 2px;
+}
+.unchecked-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px dashed grey;
+  cursor: pointer;
+}
+
+.unchecked-circle:hover {
+  border: 2px solid grey;
+}
+
+.unchecked-circle:active {
+  background-color: grey;
+}
 
 .pointer {
   cursor: pointer;
@@ -90,11 +110,40 @@ nav {
   top: 12%;
   right: 5%;
 }
-.davii-popup {
+
+.davii-popup,
+.text-content-container div p,
+.alerts-container h3,
+.all-store p,
+.collection-name h3,
+.padding-x-0 p,
+.username div h3,
+.username p,
+.username div h3,
+.username div .email {
   margin: 0;
+}
+
+.text-content-container,
+.setup-guide-section p,
+.customize-text-container .customize-text,
+.show-guide,
+.alert-content-container p,
+.all-store p,
+.user-menu-buttons p,
+.collection-name h3,
+.username div h3,
+.username p {
+  font-size: 13px;
+}
+.davii-popup {
   right: 2%;
   left: 15%;
   padding: 0;
+}
+.davii-popup a {
+  text-decoration: none;
+  color: #303030;
 }
 
 /* .show-list-item:hover {
@@ -136,7 +185,7 @@ nav {
   color: #22a369;
 }
 
-.p-top {
+.section {
   padding-top: 2em;
   display: flex;
   flex-direction: column;
@@ -147,7 +196,6 @@ nav {
   color: white;
   padding: 12px 8px 12px 16px;
   /* padding: 8px 16px; */
-  font-size: 13px;
   align-items: flex-start;
 }
 .text-content-container div {
@@ -155,9 +203,7 @@ nav {
   flex-direction: column;
   gap: 16px;
 }
-.text-content-container div p {
-  margin: 0;
-}
+
 .text-content-container div button {
   background: #f7f7f7;
   outline: none;
@@ -201,9 +247,7 @@ nav {
 .setup-guide-section h1 {
   font-size: 14px;
 }
-.setup-guide-section p {
-  font-size: 13px;
-}
+
 .dropdown-icons svg {
   border-radius: 10px;
 }
@@ -220,14 +264,16 @@ nav {
 }
 
 .progress-checkbox-icon {
-  position: relative;
+  /* background: blue; */
+  padding: 2px 0;
+  /* position: relative; */
 }
-.checkedbox {
+/* .checkedbox {
   position: absolute;
   left: 0;
   top: 0;
   display: none;
-}
+} */
 
 .setup-guide-container .dropdown-icons svg {
   margin-top: 8px;
@@ -264,12 +310,9 @@ nav {
   margin: 5px 0 0 0;
   padding: 0;
   cursor: pointer;
-  font-size: 13px;
   font-weight: 600;
 }
-.show-guide {
-  font-size: 13px;
-}
+
 .customize-text-container a {
   text-decoration: none;
 }
@@ -347,7 +390,6 @@ nav {
 }
 .alerts-container h3 {
   font-size: 14px;
-  margin: 0;
 }
 .alerts-container div {
   display: flex;
@@ -367,7 +409,6 @@ nav {
 }
 .alert-content-container p {
   font-weight: 600;
-  font-size: 13px;
   text-align: center;
 }
 
@@ -396,22 +437,11 @@ nav {
   flex-direction: column;
   gap: 6px;
 }
-.all-store p,
-.user-menu-buttons p {
-  font-size: 13px;
-}
-.all-store p {
-  margin: 0;
-}
 
 .collection-name {
   gap: 0.5em;
 }
 
-.collection-name h3 {
-  margin: 0;
-  font-size: 13px;
-}
 .padding {
   padding: 0.5em;
   border-bottom: 1px solid rgba(158, 158, 158, 0.393);
@@ -420,7 +450,6 @@ nav {
   padding: 0.5em 3px;
 }
 .padding-x-0 p {
-  margin: 0;
   padding: 6px;
 }
 .username {
@@ -433,11 +462,7 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.username div h3,
-.username p {
-  font-size: 13px;
-  margin: 0;
-}
+
 .username p,
 .username div {
   border-radius: 6px;
@@ -447,10 +472,6 @@ nav {
   color: #616161;
   font-size: 12px;
   padding: 0;
-}
-.username div h3,
-.username div .email {
-  margin: 0;
 }
 
 /* Desktop View Point */
@@ -495,7 +516,7 @@ nav {
     display: block;
     font-size: 12px;
   }
-  .p-top {
+  .section {
     width: 50%;
     margin: 0 auto;
     /* background-color: green; */
